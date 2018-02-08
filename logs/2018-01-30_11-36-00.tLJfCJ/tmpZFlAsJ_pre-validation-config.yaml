@@ -1,0 +1,28 @@
+aggregator: {enabled: true, package: yandextank.plugins.Aggregator}
+android: {enabled: false, package: yandextank.plugins.Android}
+autostop: {enabled: true, package: yandextank.plugins.Autostop}
+bfg: {enabled: false, package: yandextank.plugins.Bfg}
+console: {enabled: true, package: yandextank.plugins.Console}
+core: {}
+jmeter: {enabled: false, package: JMeter}
+json_report: {enabled: true, package: yandextank.plugins.JsonReport}
+overload: {enabled: false, package: yandextank.plugins.DataUploader}
+phantom:
+  address: 127.0.0.1:33333
+  enabled: true
+  header_http: '1.1'
+  headers: '[Host: www.target.example.com]
+
+    [Connection: close]
+
+    '
+  load_profile: {load_type: rps, schedule: 'const(1, 10s)'}
+  package: yandextank.plugins.Phantom
+  uris: '/
+
+    '
+rcassert: {enabled: true, package: yandextank.plugins.RCAssert}
+rcheck: {enabled: true, package: yandextank.plugins.ResourceCheck}
+shellexec: {enabled: true, package: yandextank.plugins.ShellExec}
+telegraf: {enabled: false, package: yandextank.plugins.Telegraf}
+tips: {enabled: true, package: yandextank.plugins.TipsAndTricks}

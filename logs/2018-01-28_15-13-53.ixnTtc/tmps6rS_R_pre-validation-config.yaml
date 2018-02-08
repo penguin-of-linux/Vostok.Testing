@@ -1,0 +1,19 @@
+aggregator: {enabled: true, package: yandextank.plugins.Aggregator}
+android: {enabled: false, package: yandextank.plugins.Android}
+autostop: {enabled: true, package: yandextank.plugins.Autostop}
+bfg: {enabled: false, package: yandextank.plugins.Bfg}
+console: {enabled: true, package: yandextank.plugins.Console}
+core: {}
+jmeter: {enabled: false, package: JMeter}
+json_report: {enabled: true, package: yandextank.plugins.JsonReport}
+overload: {enabled: false, package: yandextank.plugins.DataUploader}
+phantom:
+  address: www.yandex.ru
+  enabled: true
+  load_profile: {load_type: rps, schedule: 'line(1, 10, 10m)'}
+  package: yandextank.plugins.Phantom
+rcassert: {enabled: true, package: yandextank.plugins.RCAssert}
+rcheck: {enabled: true, package: yandextank.plugins.ResourceCheck}
+shellexec: {enabled: true, package: yandextank.plugins.ShellExec}
+telegraf: {enabled: false, package: yandextank.plugins.Telegraf}
+tips: {enabled: true, package: yandextank.plugins.TipsAndTricks}

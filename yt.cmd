@@ -1,0 +1,1 @@
+docker run -v "C:\Users\peng\Documents\Sample":/var/loadtest --net host -it direvius/yandex-tank
