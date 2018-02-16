@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,16 +18,18 @@ namespace Vostok.Testing
         protected Task _task;
 
         [OneTimeSetUp]
-        private void Initialize()
+        public void Initialize()
         {
-            _app = (IVostokHost)typeof(EntryPoint).GetMethod("BuildWebHost").Invoke(null, new object[]{});
-            _task = Task.Run(() => _app.Run());
+            _app = (IVostokHost) typeof(EntryPoint).GetMethod("BuildVostokHost", BindingFlags.NonPublic | BindingFlags.Static).Invoke(null, new object[] { new string[]{} });
+            //_task = Task.Run(() => _app.Run());
+            _app.RunAsync();
         }
 
         [OneTimeTearDown]
-        private void Finish()
+        public void Finish()
         {
-            _task.Wait(new CancellationToken());
+            //_task.Wait(new CancellationToken());
+            ;
         }
 
         [Test]

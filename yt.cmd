@@ -1,1 +1,1 @@
-docker run -v "C:\Users\peng\Documents\Sample":/var/loadtest --net host -it direvius/yandex-tank
+docker run --rm -v c:/Users/khapov/Documents:/var/loadtest --net host -it direvius/yandex-tank

@@ -10,7 +10,8 @@ namespace Sample.Controllers
         [HttpGet("{*url}")]
         public object Echo()
         {
-            for (int i = 0; i < 1000000; i ++) ;
+            var i = 0;
+            for (; i < 50000; i ++) ;
             return 42;
         }
     }
